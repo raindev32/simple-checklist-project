@@ -1,14 +1,17 @@
 import Layout from '../components/BaseLayout'
+import Link from 'next/link'
 
 import fetch from 'isomorphic-unfetch'
 
-const Checklist = (props) => (
+const Detail = (props) => (
     <Layout>
         <h1>Daftar Checklist</h1>
         <ul>
             {props.dataList.map((item, index) => (
                 <li key={index}>
-                    <a>{item.name}</a>
+                    <Link as={`/detail/${item.id}`} href={`/detail?id=${item.id}`}>
+                        <a>{item.name}</a>
+                    </Link>
                 </li>    
             ))}
         </ul>
@@ -25,12 +28,12 @@ const Checklist = (props) => (
     </Layout>
 )
 
-Checklist.getInitialProps = async function() {
-    const rest = await fetch('http://18.139.50.74:8080/checklist')
+Detail.getInitialProps = async function() {
+    const rest = await fetch('https://jsonplaceholder.typicode.com/users')
     const data = await rest.json()
     console.log('total data', data.length)
 
     return { dataList: data }
 }
 
-export default Checklist
+export default Detail
