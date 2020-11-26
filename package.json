@@ -1,0 +1,32 @@
+{
+  "name": "next-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "isomorphic-unfetch": "^3.1.0",
+    "next": "^10.0.3",
+    "nodemon": "^2.0.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-material-ui": "^1.0.1",
+    "eslint-plugin-react": "^7.12.3",
+    "eslint-plugin-react-with-styles": "^2.2.0"
+  }
+}
