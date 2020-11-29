@@ -1,11 +1,11 @@
-import Layout from './components/BaseLayout'
-import Home from '../src/container/home/Container'
+import HeaderAuth from './components/Header/Auth'
 
 const Index = () => {
-    return(
-        <Layout>
-            <Home description="Welcome to My Project"/>
-        </Layout>
-    )
+  return(
+    <div>
+        <HeaderAuth />
+        <h1>Welcome to my project!</h1>
+    </div>
+  )
 }
-export default Index
+export default  Index
